@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<components xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:noNamespaceSchemaLocation="urn:magento:module:Loki_Components:etc/loki_components.xsd">
+    <component
+        name="loki-checkout.steps.login"
+        context="LokiCheckout\Core\Component\Base\Generic\CheckoutContext"
+        viewModel="YireoTraining\ExampleLokiCheckoutStepLogin\Component\Checkout\Step\LoginStep\LoginStepViewModel">
+    </component>
+
+    <component
+        name="loki-checkout.steps.login.form"
+        context="LokiCheckout\Core\Component\Base\Generic\CheckoutContext"
+        repository="YireoTraining\ExampleLokiCheckoutStepLogin\Component\Checkout\LoginForm\LoginFormRepository"
+        viewModel="YireoTraining\ExampleLokiCheckoutStepLogin\Component\Checkout\LoginForm\LoginFormViewModel">
+        <target name="loki-checkout.steps"/>
+        <target name="loki-checkout.progressbar"/>
+        <target name="loki-checkout.sidebar"/>
+    </component>
+
+    <component
+        name="loki-checkout.steps.steps.forward-button"
+        group="stepButtons"
+        viewModel="LokiCheckout\Core\Component\Checkout\StepButton\StepForwardButton\StepForwardButtonViewModel"
+        repository="LokiCheckout\Core\Component\Checkout\StepButton\StepForwardButton\StepForwardButtonRepository"
+    />
+</components>

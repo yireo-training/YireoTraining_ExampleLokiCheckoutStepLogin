@@ -1,0 +1,20 @@
+{
+  "name": "yireo-training/magento2-example-loki-checkout-step-login",
+  "version": "0.0.1",
+  "description": "N/A",
+  "type": "magento2-module",
+  "require": {
+    "magento/framework": "^103.0"
+  },
+  "license": [
+    "OSL-3.0"
+  ],
+  "autoload": {
+    "files": [
+      "registration.php"
+    ],
+    "psr-4": {
+      "YireoTraining\\ExampleLokiCheckoutStepLogin\\": ""
+    }
+  }
+}
