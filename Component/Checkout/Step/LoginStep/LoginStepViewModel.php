@@ -9,8 +9,7 @@ use Loki\Components\Component\ComponentViewModel;
 /**
  * @method CheckoutContext getContext()
  */
-class LoginStepViewModel extends ComponentViewModel
-    implements StepViewModelInterface
+class LoginStepViewModel extends ComponentViewModel implements StepViewModelInterface
 {
     public function getCode(): string
     {
@@ -61,5 +60,3 @@ class LoginStepViewModel extends ComponentViewModel
         return 'ExampleLokiCheckoutStepLoginComponent';
     }
 }
-
-

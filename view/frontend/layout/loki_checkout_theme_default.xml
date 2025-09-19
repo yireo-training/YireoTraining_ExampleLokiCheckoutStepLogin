@@ -6,12 +6,7 @@
             <block
                 name="loki-checkout.steps.login"
                 as="login"
-                template="LokiCheckout_Core::generic/container.phtml"
-            >
-                <arguments>
-                    <argument name="sort_order" xsi:type="number">-1</argument>
-                </arguments>
-
+                template="LokiCheckout_Core::generic/container.phtml">
                 <block name="loki-checkout.steps.login.form"
                        template="YireoTraining_ExampleLokiCheckoutStepLogin::checkout/step/login.phtml">
                 </block>
