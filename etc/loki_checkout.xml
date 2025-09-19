@@ -3,13 +3,13 @@
     <themes>
         <theme name="default">
             <steps>
-                <step name="login" blockName="loki-checkout.steps.login" sortOrder="-1" />
+                <step name="login" blockName="loki-checkout.steps.login" sortOrder="1" />
             </steps>
         </theme>
 
         <theme name="demo">
             <steps>
-                <step name="login" blockName="loki-checkout.steps.login" sortOrder="-1" />
+                <step name="login" blockName="loki-checkout.steps.login" sortOrder="1" />
             </steps>
         </theme>
     </themes>
