@@ -9,7 +9,8 @@ use Loki\Components\Component\ComponentViewModel;
 /**
  * @method CheckoutContext getContext()
  */
-class LoginStepViewModel extends ComponentViewModel implements StepViewModelInterface
+class LoginStepViewModel extends ComponentViewModel
+    implements StepViewModelInterface
 {
     public function getCode(): string
     {
@@ -48,7 +49,11 @@ class LoginStepViewModel extends ComponentViewModel implements StepViewModelInte
 
     public function validate(): true|array
     {
-        return $this->getContext()->getCustomerSession()->isLoggedIn();
+        if (true === $this->getContext()->getCustomerSession()->isLoggedIn()) {
+            return true;
+        }
+
+        return [__('You need to login')];
     }
 
     public function getJsComponentName(): ?string
