@@ -10,8 +10,8 @@
     <component
         name="loki-checkout.steps.login.form"
         context="LokiCheckout\Core\Component\Base\Generic\CheckoutContext"
-        repository="YireoTraining\ExampleLokiCheckoutStepLogin\Component\Checkout\LoginForm\LoginFormRepository"
-        viewModel="YireoTraining\ExampleLokiCheckoutStepLogin\Component\Checkout\LoginForm\LoginFormViewModel">
+        repository="LokiCheckout\Core\Component\Customer\LoginForm\LoginFormRepository"
+        viewModel="LokiCheckout\Core\Component\Customer\LoginForm\LoginFormViewModel">
         <target name="loki-checkout.steps"/>
         <target name="loki-checkout.progressbar"/>
         <target name="loki-checkout.sidebar"/>

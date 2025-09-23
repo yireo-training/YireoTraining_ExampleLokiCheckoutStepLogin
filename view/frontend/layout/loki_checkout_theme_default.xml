@@ -6,17 +6,9 @@
             <block
                 name="loki-checkout.steps.login"
                 as="login"
-                template="LokiCheckout_Core::generic/container.phtml">
-                <block name="loki-checkout.steps.login.form"
-                       template="YireoTraining_ExampleLokiCheckoutStepLogin::checkout/step/login.phtml">
-                </block>
-            </block>
+                template="LokiCheckout_Core::generic/container.phtml"/>
         </referenceBlock>
 
-        <referenceContainer name="loki.script.component">
-            <block
-                name="loki-checkout.script.component.login-component"
-                template="YireoTraining_ExampleLokiCheckoutStepLogin::script/component/login-component.phtml"/>
-        </referenceContainer>
+        <move element="loki-checkout.login.form.inner" destination="loki-checkout.steps.login"/>
     </body>
 </page>

@@ -3,13 +3,12 @@
 namespace YireoTraining\ExampleLokiCheckoutStepLogin\Component\Checkout\Step\LoginStep;
 
 use LokiCheckout\Core\Component\Base\Generic\CheckoutContext;
-use LokiCheckout\Core\Component\Checkout\Step\StepViewModelInterface;
-use Loki\Components\Component\ComponentViewModel;
+use LokiCheckout\Core\Component\Checkout\Step\AbstractStepViewModel;
 
 /**
  * @method CheckoutContext getContext()
  */
-class LoginStepViewModel extends ComponentViewModel implements StepViewModelInterface
+class LoginStepViewModel extends AbstractStepViewModel
 {
     public function getCode(): string
     {
@@ -30,22 +29,6 @@ class LoginStepViewModel extends ComponentViewModel implements StepViewModelInte
         return true;
     }
 
-    public function isAccessable(): bool
-    {
-        return true;
-    }
-
-    public function isVisible(): bool
-    {
-        return $this->getContext()->getStepNavigator()->isCurrentStep($this);
-    }
-
-
-    public function getStep(): string
-    {
-        return 'none';
-    }
-
     public function validate(): true|array
     {
         if (true === $this->getContext()->getCustomerSession()->isLoggedIn()) {
@@ -53,10 +36,5 @@ class LoginStepViewModel extends ComponentViewModel implements StepViewModelInte
         }
 
         return [__('You need to login')];
-    }
-
-    public function getJsComponentName(): ?string
-    {
-        return 'ExampleLokiCheckoutStepLoginComponent';
     }
 }
