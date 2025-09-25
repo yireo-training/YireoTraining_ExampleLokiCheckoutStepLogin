@@ -8,15 +8,9 @@
                 as="login"
                 template="LokiCheckout_Core::generic/container.phtml">
                 <block name="loki-checkout.steps.login.form"
-                       template="YireoTraining_ExampleLokiCheckoutStepLogin::checkout/step/login.phtml">
+                       template="LokiCheckout_Core::customer.phtml">
                 </block>
             </block>
         </referenceBlock>
-
-        <referenceContainer name="loki.script.component">
-            <block
-                name="loki-checkout.script.component.login-component"
-                template="YireoTraining_ExampleLokiCheckoutStepLogin::script/component/login-component.phtml"/>
-        </referenceContainer>
     </body>
 </page>
